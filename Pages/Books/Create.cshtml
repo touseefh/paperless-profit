@@ -1,0 +1,98 @@
+@page
+@model Bookshop.Pages.Books.CreateModel
+@{
+    ViewData["Title"] = "Create";
+}
+<style>
+
+    .book-heading{
+        color:  blue;
+    }
+</style>
+
+<div class="container mt-5">
+    <div class="card p-4">
+        <h2 class="text-center book-heading">Add New Book</h2>
+
+        @if (!string.IsNullOrEmpty(Model.Message))
+        {
+            <div class="alert alert-success" role="alert">
+                @Model.Message
+            </div>
+        }
+
+        <form method="post">
+            <div class="form-group row mb-3">
+                <label class="col-sm-2 col-form-label text-right" asp-for="BookCreate.BookID">Book ID<span>*</span></label>
+                <div class="col-sm-10">
+                    <input asp-for="BookCreate.BookID" class="form-control" />
+                    <span asp-validation-for="BookCreate.BookID" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row mb-3">
+                <label class="col-sm-2 col-form-label text-right" asp-for="BookCreate.Title">Title<span>*</span></label>
+                <div class="col-sm-10">
+                    <input asp-for="BookCreate.Title" class="form-control" />
+                    <span asp-validation-for="BookCreate.Title" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row mb-3">
+                <label class="col-sm-2 col-form-label text-right" asp-for="BookCreate.Author">Author<span>*</span></label>
+                <div class="col-sm-10">
+                    <input asp-for="BookCreate.Author" class="form-control" />
+                    <span asp-validation-for="BookCreate.Author" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row mb-3">
+                <label class="col-sm-2 col-form-label text-right" asp-for="BookCreate.Genre">Genre<span>*</span></label>
+                <div class="col-sm-10">
+                    <input asp-for="BookCreate.Genre" class="form-control" />
+                    <span asp-validation-for="BookCreate.Genre" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row mb-3">
+                <label class="col-sm-2 col-form-label text-right" asp-for="BookCreate.ISBN">ISBN<span>*</span></label>
+                <div class="col-sm-10">
+                    <input asp-for="BookCreate.ISBN" class="form-control" />
+                    <span asp-validation-for="BookCreate.ISBN" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row mb-3">
+                <label class="col-sm-2 col-form-label text-right" asp-for="BookCreate.Price">Price<span>*</span></label>
+                <div class="col-sm-10">
+                    <input asp-for="BookCreate.Price" class="form-control" />
+                    <span asp-validation-for="BookCreate.Price" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row mb-3">
+                <label class="col-sm-2 col-form-label text-right" asp-for="BookCreate.StockQuantity">Stock Quantity<span>*</span></label>
+                <div class="col-sm-10">
+                    <input asp-for="BookCreate.StockQuantity" class="form-control" />
+                    <span asp-validation-for="BookCreate.StockQuantity" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row mb-3">
+                <label class="col-sm-2 col-form-label text-right" asp-for="BookCreate.PublisherID">Publisher ID<span>*</span></label>
+                <div class="col-sm-10">
+                    <input asp-for="BookCreate.PublisherID" class="form-control" />
+                    <span asp-validation-for="BookCreate.PublisherID" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row mb-3">
+                <label class="col-sm-2 col-form-label text-right" asp-for="BookCreate.SupplierID">Supplier ID<span>*</span></label>
+                <div class="col-sm-10">
+                    <input asp-for="BookCreate.SupplierID" class="form-control" />
+                    <span asp-validation-for="BookCreate.SupplierID" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row mt-4">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-10">
+                    <button type="submit" class="btn btn-primary">Add</button>
+                    <span class="mx-2"></span> <!-- Adding space between buttons -->
+                    <a asp-page="./Books" class="btn btn-secondary">Cancel</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

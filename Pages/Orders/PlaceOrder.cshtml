@@ -1,0 +1,119 @@
+@page
+@model Bookshop.Pages.Orders.PlaceOrderModel
+@{
+    ViewData["Title"] = "Place Order";
+}
+
+<style>
+    .place-order-form {
+        background-color: #f8f9fa;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .place-heading {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        font-family: Arial, sans-serif;
+        font-size: 24px;
+    }
+
+    .form-label {
+        text-align: left;
+        display: block;
+    }
+
+    .form-group {
+        text-align: left;
+    }
+</style>
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4 place-heading">Place Order</h2>
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="place-order-form">
+                <form method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                    <div class="form-group mb-3">
+                        <label asp-for="OrderInput.OrderID" class="form-label" for="OrderID">Order ID</label>
+                        <input asp-for="OrderInput.OrderID" id="OrderID" class="form-control" required />
+                        <span asp-validation-for="OrderInput.OrderID" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label asp-for="OrderInput.OrderDate" class="form-label" for="OrderDate">Order Date</label>
+                        <input asp-for="OrderInput.OrderDate" id="OrderDate" type="date" class="form-control" required />
+                        <span asp-validation-for="OrderInput.OrderDate" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label asp-for="OrderInput.CustomerID" class="form-label" for="CustomerID">Customer Name</label>
+                        <select asp-for="OrderInput.CustomerID" id="CustomerID" class="form-control" required>
+                            <option value="">-- Select Customer --</option>
+                            @foreach (var customer in Model.Customers)
+                            {
+                                <option value="@customer.CustomerID">@customer.Name</option>
+                            }
+                        </select>
+                        <span asp-validation-for="OrderInput.CustomerID" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label asp-for="OrderInput.SalesmanID" class="form-label" for="SalesmanID">Salesman Name</label>
+                        <select asp-for="OrderInput.SalesmanID" id="SalesmanID" class="form-control" required>
+                            <option value="">-- Select Salesman --</option>
+                            @foreach (var salesman in Model.Salesmen)
+                            {
+                                <option value="@salesman.SalesmanID">@salesman.Name</option>
+                            }
+                        </select>
+                        <span asp-validation-for="OrderInput.SalesmanID" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label asp-for="OrderInput.BookID" class="form-label" for="BookID">Book Name</label>
+                        <select asp-for="OrderInput.BookID" id="BookID" class="form-control" required>
+                            <option value="">-- Select Book --</option>
+                            @foreach (var book in Model.Books)
+                            {
+                                <option value="@book.BookID">@book.Title</option>
+                            }
+                        </select>
+                        <span asp-validation-for="OrderInput.BookID" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label asp-for="OrderInput.StationeryID" class="form-label" for="StationeryID">Stationery Name</label>
+                        <select asp-for="OrderInput.StationeryID" id="StationeryID" class="form-control" required>
+                            <option value="">-- Select Stationery --</option>
+                            @foreach (var stationery in Model.Stationeries)
+                            {
+                                <option value="@stationery.StationeryID">@stationery.Name</option>
+                            }
+                        </select>
+                        <span asp-validation-for="OrderInput.StationeryID" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label asp-for="OrderInput.BookQuantity" class="form-label" for="BookQuantity">Book Quantity</label>
+                        <input asp-for="OrderInput.BookQuantity" id="BookQuantity" class="form-control" required />
+                        <span asp-validation-for="OrderInput.BookQuantity" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label asp-for="OrderInput.StationeryQuantity" class="form-label" for="StationeryQuantity">Stationery Quantity</label>
+                        <input asp-for="OrderInput.StationeryQuantity" id="StationeryQuantity" class="form-control" required />
+                        <span asp-validation-for="OrderInput.StationeryQuantity" class="text-danger"></span>
+                    </div>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                        <button type="submit" asp-page-handler="PlaceOrder" class="btn btn-primary me-md-2">Place Order</button>
+                        <button type="submit" asp-page-handler="Cancel" class="btn btn-secondary">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

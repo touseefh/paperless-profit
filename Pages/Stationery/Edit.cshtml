@@ -1,0 +1,71 @@
+@page
+@model Bookshop.Pages.Stationery.EditModel
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<style>
+    .edit-stationery{
+        color: blue;
+    }
+</style>
+
+<div class="container mt-5">
+    <div class="card p-4">
+        <h2 class="text-center mb-4 edit-stationery">Edit Stationery</h2>
+
+        <form method="post">
+            <input type="hidden" asp-for="StationeryEdit.StationeryID" />
+
+            <div class="form-group row mb-3">
+                <label class="col-sm-2 col-form-label text-right">Stationery ID:</label>
+                <div class="col-sm-10">
+                    <input class="form-control" readonly asp-for="StationeryEdit.StationeryID" />
+                </div>
+            </div>
+            <div class="form-group row mb-3">
+                <label class="col-sm-2 col-form-label text-right" asp-for="StationeryEdit.Name">Name:</label>
+                <div class="col-sm-10">
+                    <input asp-for="StationeryEdit.Name" class="form-control" />
+                    <span asp-validation-for="StationeryEdit.Name" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row mb-3">
+                <label class="col-sm-2 col-form-label text-right" asp-for="StationeryEdit.Description">Description:</label>
+                <div class="col-sm-10">
+                    <input asp-for="StationeryEdit.Description" class="form-control" />
+                    <span asp-validation-for="StationeryEdit.Description" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row mb-3">
+                <label class="col-sm-2 col-form-label text-right" asp-for="StationeryEdit.Type">Type:</label>
+                <div class="col-sm-10">
+                    <input asp-for="StationeryEdit.Type" class="form-control" />
+                    <span asp-validation-for="StationeryEdit.Type" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row mb-3">
+                <label class="col-sm-2 col-form-label text-right" asp-for="StationeryEdit.Price">Price:</label>
+                <div class="col-sm-10">
+                    <input asp-for="StationeryEdit.Price" class="form-control" />
+                    <span asp-validation-for="StationeryEdit.Price" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row mb-3">
+                <label class="col-sm-2 col-form-label text-right" asp-for="StationeryEdit.StockQuantity">Stock Quantity:</label>
+                <div class="col-sm-10">
+                    <input asp-for="StationeryEdit.StockQuantity" class="form-control" />
+                    <span asp-validation-for="StationeryEdit.StockQuantity" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-group row mt-4">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-10">
+                    <button type="submit" class="btn btn-primary">Update</button>
+                    <a asp-page="./Stationery" class="btn btn-secondary ml-2">Cancel</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

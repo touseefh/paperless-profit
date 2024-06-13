@@ -1,0 +1,96 @@
+@page
+@model Bookshop.Pages.Stationery.SearchModel
+@{
+    ViewData["Title"] = "Search Stationery";
+}
+
+<style>
+    .search-card {
+        background-color: #f8f9fa;
+        border-radius: 10px;
+        padding: 15px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .search-card-title {
+        font-size: 1.5rem; /* Increase font size for the search title */
+        font-weight: bold;
+        color: #333;
+    }
+
+    .search-card-info {
+        margin-top: 20px; /* Increase top margin for search results */
+    }
+
+    .search-card-info p {
+        margin-bottom: 10px; /* Increase bottom margin for search result details */
+    }
+
+    .btn-primary, .btn-secondary {
+        font-size: 1rem; /* Increase font size for buttons */
+        padding: 10px 20px; /* Increase padding for buttons */
+    }
+
+    .search-card {
+        background-color: #e9ecef; /* Light gray background color for the search card */
+    }
+
+    .search-result {
+        background-color: #f1f1f1; /* Light background color for search results */
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+     .stationery-heading {
+        background-color: #007bff; /* Blue background color for "List Of Stationery" heading */
+        color: #fff; /* White text color for "List Of Stationery" heading */
+        padding: 10px 20px; /* Adjust padding values as needed */
+        border-radius: 5px;
+        margin-bottom: 20px; /* Add margin at the bottom */
+    }
+</style>
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4 search-card-title stationery-heading">Search Stationery</h2>
+
+    <div class="search-card">
+        <div class="card-body">
+            <form method="post">
+                <div class="form-group row mb-3">
+                    <label class="col-sm-2 col-form-label text-right" asp-for="StationeryID">Stationery ID:</label>
+                    <div class="col-sm-8">
+                        <input asp-for="StationeryID" class="form-control" />
+                    </div>
+                    <div class="col-sm-2 mt-2 mt-sm-0">
+                        <button type="submit" class="btn btn-primary">Search</button>
+                        <a asp-page="./Stationery" class="btn btn-secondary ml-2">Cancel</a>
+                    </div>
+                </div>
+            </form>
+
+            @if (Model.StationerySearch != null)
+            {
+                <div class="search-result">
+                    <h2 class="search-card-title text-center mb-4">Search Results</h2>
+                    <div class="card">
+                        <div class="card-body">
+                            <p><strong>Stationery ID:</strong> @Model.StationerySearch.StationeryID</p>
+                            <p><strong>Name:</strong> @Model.StationerySearch.Name</p>
+                            <p><strong>Description:</strong> @Model.StationerySearch.Description</p>
+                            <p><strong>Type:</strong> @Model.StationerySearch.Type</p>
+                            <p><strong>Price:</strong> @Model.StationerySearch.Price</p>
+                            <p><strong>Stock Quantity:</strong> @Model.StationerySearch.StockQuantity</p>
+                        </div>
+                    </div>
+                </div>
+            }
+            else if (Model.StationeryID != 0)
+            {
+                <div class="alert alert-warning text-center mt-3" role="alert">
+                    No results found. Please enter a valid Stationery ID.
+                </div>
+            }
+        </div>
+    </div>
+</div>

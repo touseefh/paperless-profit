@@ -1,0 +1,96 @@
+@page
+@model Bookshop.Pages.Orders.OrderHistoryModel
+@{
+    ViewData["Title"] = "Order History";
+}
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+    }
+
+    .card {
+        background-color: #f1f1f1; /* Light gray background color for the card */
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+    }
+
+    .card-title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .card-text {
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    .btn-primary {
+        background-color: #343a40; /* Dark gray background color for the button */
+        border-color: #343a40; /* Dark gray border color for the button */
+        color: #fff; /* White text color for the button */
+        font-size: 16px;
+        padding: 8px 16px;
+        transition: background-color 0.3s, border-color 0.3s;
+    }
+
+    .btn-primary:hover {
+        background-color: #23272b; /* Darker shade on hover for the button */
+        border-color: #1d2124; /* Darker shade on hover for the button */
+    }
+
+    h1 {
+        font-size: 36px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 40px;
+        background-color: #007bff; /* Blue background color for "Customers" heading */
+        color: #fff; /* White text color for "Customers" heading */
+        padding: 10px 20px; /* Adjust padding values as needed */
+        border-radius: 5px;
+    }
+</style>
+
+<div class="container">
+    <h1>Order History</h1>
+
+    @if (Model.Orders.Count > 0)
+    {
+        <div class="row">
+            @foreach (var order in Model.Orders)
+            {
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Order ID: @order.OrderID</h5>
+                            <p class="card-text">Order Date: @order.OrderDate.ToShortDateString()</p>
+                            <p class="card-text">Total Amount: $@order.TotalAmount</p>
+                            <p class="card-text">Customer: @order.CustomerName</p>
+                            <p class="card-text">Stationery: @order.StationeryName</p>
+                            <p class="card-text">Book: @order.BookName</p>
+                            <p class="card-text">Salesman: @order.SalesmanName</p>
+                            <p class="card-text">Quantity: @order.Quantity</p>
+                            <form method="post" asp-page-handler="PrintInvoice">
+                                <input type="hidden" name="orderId" value="@order.OrderID" />
+                                <button type="submit" class="btn btn-primary">Print Invoice</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <p>No orders found.</p>
+    }
+</div>

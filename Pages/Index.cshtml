@@ -1,0 +1,187 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+    }
+    .card-img-top {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+    .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+        transition: background-color 0.3s, border-color 0.3s;
+    }
+    .btn-primary:hover {
+        background-color: #0056b3;
+        border-color: #004085;
+    }
+    .card {
+        background-color: #f8f9fa;
+    }
+    .display-4 {
+        font-size: 3rem;
+    }
+    .lead {
+        font-size: 1.5rem;
+    }
+    .about-section h2, .about-section h4 {
+        font-family: 'Georgia', serif;
+    }
+    .about-section h2 {
+        font-size: 2.5rem;
+    }
+    .about-section h4 {
+        font-size: 1.75rem;
+    }
+    .about-section p, .about-section li {
+        font-size: 1.25rem;
+    }
+    .about-section ul {
+        list-style: disc;
+        padding-left: 20px;
+    }
+    .about-section ul li {
+        margin-bottom: 10px;
+    }
+    footer {
+        background-color: #7EBAD3; /* Light blue background */
+    }
+    .footer-text {
+        font-size: 1.4rem;
+        color: #000000; /* Black text color */
+        font-weight: bold;
+        text-align: center;
+    }
+</style>
+
+<!-- Hero Section -->
+<div class="jumbotron text-center bg-primary text-white py-5 mt-4"> <!-- Added mt-4 class for margin-top -->
+    <div class="container">
+        <h1 class="display-4">Welcome to Books +</h1>
+        <p class="lead">Your all-in-one solution for managing your bookshop.</p>
+    </div>
+</div>
+
+
+<!-- Description Section -->
+<div class="container mt-5 about-section">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <h2 class="text-center mb-4 text-primary">About Books + POS</h2>
+            <p class="text-center">Simplify your bookshop management with Bookshop POS. Streamline inventory, sales, and customer relationships with ease.</p>
+            <div id="aboutDescription" class="collapse">
+                <h4 class="text-center mb-3 text-primary">Key Features:</h4>
+                <ul>
+                    <li>Efficiently manage your book inventory, including tracking stock levels, receiving new shipments, and updating product information.</li>
+                    <li>Process sales transactions quickly and accurately, with support for various payment methods and discounts.</li>
+                    <li>Track customer information and purchase history to provide personalized recommendations and promotions.</li>
+                    <li>Generate insightful reports to analyze sales trends, monitor inventory turnover, and optimize your business strategy.</li>
+                    <li>Integrate seamlessly with online marketplaces and e-commerce platforms for expanded reach and visibility.</li>
+                    <li>Customize your system with add-on modules for advanced features such as loyalty programs, gift cards, and event management.</li>
+                    <li>Stay organized with centralized management of supplier relationships, purchase orders, and vendor payments.</li>
+                    <li>Enhance productivity with user-friendly interfaces, intuitive workflows, and comprehensive training resources.</li>
+                </ul>
+            </div>
+            <p class="text-center mt-4">
+                <button class="btn btn-primary btn-lg" type="button" data-bs-toggle="collapse" data-bs-target="#aboutDescription" aria-expanded="false" aria-controls="aboutDescription">Learn More</button>
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Features Section -->
+<div class="container-fluid bg-light mt-5 py-5">
+    <div class="container">
+        <h2 class="text-center mb-4 text-primary">Key Features</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="~/images/stationery.jpg" class="card-img-top" alt="Inventory Management">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">Stationery Management</h5>
+                        <p class="card-text">Effortlessly track your book inventory, receive new shipments, and update product information.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="~/images/orders.jpg" class="card-img-top" alt="Sales Transactions">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">Sales Transactions</h5>
+                        <p class="card-text">Process sales transactions quickly and accurately, with support for various payment methods and discounts.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <img src="~/images/customers.jpg" class="card-img-top" alt="Customer Management">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">Customer Management</h5>
+                        <p class="card-text">Track customer information and purchase history to provide personalized recommendations and promotions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Testimonials Section -->
+<div class="container mt-5 py-5">
+    <h2 class="text-center mb-4 text-primary">What Our Customers Say</h2>
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <p class="card-text">"Bookshop POS has revolutionized the way we manage our bookstore. It's intuitive, powerful, and incredibly user-friendly."</p>
+                                <p class="text-end fw-bold">- Touseef Hanif</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <p class="card-text">"Thanks to Bookshop POS, we've been able to streamline our inventory management and improve our customer service. Highly recommended!"</p>
+                                <p class="text-end fw-bold">- Amman Khan</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <p class="card-text">"I've been using Bookshop POS for years, and it's been a game-changer for my bookstore. The support team is excellent, and the system is constantly improving."</p>
+                                <p class="text-end fw-bold">- Sameed Asif</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer Section -->
+<h2 class="text-center mb-4 text-primary">Contact Information</h2>
+<footer class="text-dark text-center py-5" style="background-color: #7EBAD3;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <p class="footer-text">Books +</p>
+                <p class="footer-text">G-10, Islamabad, Pakistan</p>
+                <p class="footer-text">Phone: 123-456-7890</p>
+                <p class="footer-text">Email: info@bookshop.com</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+

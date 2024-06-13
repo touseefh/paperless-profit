@@ -1,0 +1,84 @@
+@page
+@model Bookshop.Pages.Books.BooksModel
+@{
+    ViewData["Title"] = "Books";
+}
+
+<style>
+    .book-card {
+        background-color: #f8f9fa;
+        border-radius: 10px;
+        padding: 15px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .book-title {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .book-info {
+        margin-top: 10px;
+    }
+
+    .book-info p {
+        margin-bottom: 5px;
+    }
+
+    .btn-primary, .btn-danger {
+        font-size: 1rem; /* Increase font size for buttons */
+        padding: 10px 16px; /* Increase padding for buttons */
+    }
+
+    .book-heading {
+        background-color: #007bff; /* Blue background color for "List Of Books" heading */
+        color: #fff; /* White text color for "List Of Books" heading */
+        padding: 10px 20px; /* Adjust padding values as needed */
+        border-radius: 5px;
+        margin-bottom: 20px; /* Add margin at the bottom */
+    }
+
+    .new-book-btn, .search-book-btn {
+        background-color: #343a40; /* Dark gray background color for buttons */
+        border-color: #343a40;
+        color: #fff; /* White text color for buttons */
+        transition: background-color 0.3s, border-color 0.3s;
+    }
+
+    .new-book-btn:hover, .search-book-btn:hover {
+        background-color: #23272b;
+        border-color: #1d2124;
+    }
+</style>
+
+<h2 class="text-center mb-3 book-heading">List Of Books</h2>
+<a class="btn btn-primary mb-3 new-book-btn" href="/Books/Create">New Book</a>
+<a class="btn btn-primary mb-3 search-book-btn" href="/Books/Search">Search Book</a>
+
+<div class="container">
+    <div class="row">
+        @foreach (var book in Model.BookList)
+        {
+            <div class="col-md-4">
+                <div class="book-card">
+                    <h5 class="book-title">@book.Title</h5>
+                    <div class="book-info">
+                        <p><strong>Author:</strong> @book.Author</p>
+                        <p><strong>Genre:</strong> @book.Genre</p>
+                        <p><strong>ISBN:</strong> @book.ISBN</p>
+                        <p><strong>Price:</strong> @book.Price</p>
+                        <p><strong>Stock Quantity:</strong> @book.StockQuantity</p>
+                        <p><strong>Publisher ID:</strong> @book.PublisherID</p>
+                        <p><strong>Supplier ID:</strong> @book.SupplierID</p>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <a class="btn btn-primary btn-sm me-2" href="/Books/Edit?BookID=@book.BookID">Edit</a>
+                        <a class="btn btn-danger btn-sm" href="/Books/Delete?BookID=@book.BookID">Delete</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Books +</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Bookshop.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand text-secondary" href="#">Books +</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active text-secondary" aria-current="page" asp-area="" asp-page="/Index">Home</a>
+                    </li>
+                       <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-secondary" href="#" id="inventoryDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Inventory
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="inventoryDropdown">
+                            <li><a class="dropdown-item" href="/Books/Books">Books</a></li>
+                            <li><a class="dropdown-item" href="/Stationery/Stationery">Stationery</a></li>
+  
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-secondary" href="#" id="customersDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Customers
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="customersDropdown">
+                            <li><a class="dropdown-item" href="/Customers/Create">New Customer</a></li>
+                            <li><a class="dropdown-item" href="/Customers/Customers">Customer List</a></li>
+                            
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-secondary" href="#" id="ordersDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Orders
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="ordersDropdown">
+                            <li><a class="dropdown-item" href="/Orders/PlaceOrder">New Order</a></li>
+                            <li><a class="dropdown-item" href="/Orders/OrderHistory">Order History</a></li>
+                            
+                        </ul>
+                    </li>
+            
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-secondary" href="#" id="reportsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Reports
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="reportsDropdown">
+                           
+                            <li><a class="dropdown-item" href="/Inventry/Inventry">Inventory Reports</a></li>
+                            
+                            <li><a class="dropdown-item" href="/Transactions/Transactions">Transaction Reports</a></li>
+                        </ul>
+                    </li>
+                
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - Books +
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

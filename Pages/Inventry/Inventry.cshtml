@@ -1,0 +1,163 @@
+@page
+@model Bookshop.Pages.Inventory.InventoryModel
+@{
+    ViewData["Title"] = "Inventory";
+}
+
+<style>
+    .card {
+        background-color: #f8f9fa;
+        border-radius: 10px;
+        padding: 15px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .card-info {
+        margin-top: 10px;
+    }
+
+    .card-info p {
+        margin-bottom: 5px;
+    }
+
+    .btn-primary, .btn-danger {
+        font-size: 1rem;
+        padding: 10px 16px;
+    }
+
+    .heading {
+        background-color: #007bff; /* Blue background color for "Customers" heading */
+        color: #fff; /* White text color for "Customers" heading */
+        padding: 10px 20px; /* Adjust padding values as needed */
+        border-radius: 5px;
+    }
+
+    .search-item-btn {
+        background-color: #343a40;
+        border-color: #343a40;
+        color: #fff;
+        transition: background-color 0.3s, border-color 0.3s;
+    }
+
+    .search-item-btn:hover {
+        background-color: #23272b;
+        border-color: #1d2124;
+    }
+
+    .chart-container {
+        margin-top: 20px;
+    }
+</style>
+
+<h2 class="text-center mb-3 heading">Inventory List</h2>
+<a class="btn btn-primary mb-3 search-item-btn" href="/Books/Search">Search Book</a>
+<a class="btn btn-primary mb-3 search-item-btn" href="/Stationery/Search">Search Stationery</a>
+
+<div class="container">
+    <h2 class="mb-3 mt-5" style="color: #0796E9;">Books</h2>
+    <div class="row">
+        @foreach (var book in Model.BookList)
+        {
+            <div class="col-md-4">
+                <div class="card">
+                    <h5 class="card-title">@book.Title</h5>
+                    <div class="card-info">
+                        <p><strong>Author:</strong> @book.Author</p>
+                        <p><strong>Genre:</strong> @book.Genre</p>
+                        <p><strong>ISBN:</strong> @book.ISBN</p>
+                        <p><strong>Price:</strong> @book.Price</p>
+                        <p><strong>Stock Quantity:</strong> @book.StockQuantity</p>
+                        <p><strong>Publisher ID:</strong> @book.PublisherID</p>
+                        <p><strong>Supplier ID:</strong> @book.SupplierID</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <div class="chart-container">
+        <canvas id="bookStockChart" width="400" height="150"></canvas>
+    </div>
+
+    <h2 class="mb-3 mt-5" style="color: #0796E9;">Stationery</h2>
+    <div class="row">
+        @foreach (var stationery in Model.StationeryList)
+        {
+            <div class="col-md-4">
+                <div class="card">
+                    <h5 class="card-title">@stationery.Name</h5>
+                    <div class="card-info">
+                        <p><strong>Description:</strong> @stationery.Description</p>
+                        <p><strong>Type:</strong> @stationery.Type</p>
+                        <p><strong>Price:</strong> @stationery.Price</p>
+                        <p><strong>Stock Quantity:</strong> @stationery.StockQuantity</p>
+                        <p><strong>Supplier ID:</strong> @stationery.SupplierID</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <div class="chart-container">
+        <canvas id="stationeryStockChart" width="400" height="150"></canvas>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var bookStockCtx = document.getElementById('bookStockChart').getContext('2d');
+            var stationeryStockCtx = document.getElementById('stationeryStockChart').getContext('2d');
+
+            var bookStockChart = new Chart(bookStockCtx, {
+                type: 'bar',
+                data: {
+                    labels: @Html.Raw(Json.Serialize(Model.BookTitles)),
+                    datasets: [{
+                        label: 'Book Stock Quantity',
+                        data: @Html.Raw(Json.Serialize(Model.BookStockQuantities)),
+                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                        borderColor: 'rgba(54, 162, 235, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+
+            var stationeryStockChart = new Chart(stationeryStockCtx, {
+                type: 'bar',
+                data: {
+                    labels: @Html.Raw(Json.Serialize(Model.StationeryNames)),
+                    datasets: [{
+                        label: 'Stationery Stock Quantity',
+                        data: @Html.Raw(Json.Serialize(Model.StationeryStockQuantities)),
+                        backgroundColor: 'rgba(255, 206, 86, 0.2)',
+                        borderColor: 'rgba(255, 206, 86, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+}

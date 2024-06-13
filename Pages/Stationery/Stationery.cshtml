@@ -1,0 +1,82 @@
+@page
+@model Bookshop.Pages.Stationery.StationeryModel
+@{
+    ViewData["Title"] = "Stationery";
+}
+
+<style>
+    .stationery-card {
+        background-color: #f8f9fa;
+        border-radius: 10px;
+        padding: 15px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .stationery-name {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .stationery-info {
+        margin-top: 10px;
+    }
+
+    .stationery-info p {
+        margin-bottom: 5px;
+    }
+
+    .btn-primary, .btn-danger {
+        font-size: 1rem; /* Increase font size for buttons */
+        padding: 10px 16px; /* Increase padding for buttons */
+    }
+
+    .stationery-heading {
+        background-color: #007bff; /* Blue background color for "List Of Stationery" heading */
+        color: #fff; /* White text color for "List Of Stationery" heading */
+        padding: 10px 20px; /* Adjust padding values as needed */
+        border-radius: 5px;
+        margin-bottom: 20px; /* Add margin at the bottom */
+    }
+
+    .new-stationery-btn, .search-stationery-btn {
+        background-color: #343a40; /* Dark gray background color for buttons */
+        border-color: #343a40;
+        color: #fff; /* White text color for buttons */
+        transition: background-color 0.3s, border-color 0.3s;
+    }
+
+    .new-stationery-btn:hover, .search-stationery-btn:hover {
+        background-color: #23272b;
+        border-color: #1d2124;
+    }
+</style>
+
+<h2 class="text-center mb-3 stationery-heading">List Of Stationery</h2>
+<a class="btn btn-primary mb-3 new-stationery-btn" href="/Stationery/Create">New Stationery</a>
+<a class="btn btn-primary mb-3 search-stationery-btn" href="/Stationery/Search">Search Stationery</a>
+
+<div class="container">
+    <div class="row">
+        @foreach (var stationery in Model.StationeryList)
+        {
+            <div class="col-md-4">
+                <div class="stationery-card">
+                    <h5 class="stationery-name">@stationery.Name</h5>
+                    <div class="stationery-info">
+                        <p><strong>Description:</strong> @stationery.Description</p>
+                        <p><strong>Type:</strong> @stationery.Type</p>
+                        <p><strong>Price:</strong> @stationery.Price</p>
+                        <p><strong>Stock Quantity:</strong> @stationery.StockQuantity</p>
+                        <p><strong>Supplier ID:</strong> @stationery.SupplierID</p>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <a class="btn btn-primary btn-sm me-2" href="/Stationery/Edit?StationeryID=@stationery.StationeryID">Edit</a>
+                        <a class="btn btn-danger btn-sm" href="/Stationery/Delete?StationeryID=@stationery.StationeryID">Delete</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

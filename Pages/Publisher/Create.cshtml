@@ -1,0 +1,64 @@
+@page
+@model Bookshop.Pages.Publisher.Create
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container mt-5">
+    <div class="card p-4">
+        <h2 class="text-center">New Publisher</h2>
+
+        @if (!string.IsNullOrEmpty(Model.Message))
+        {
+            <div class="alert alert-success" role="alert">
+                @Model.Message
+            </div>
+        }
+
+        <form method="post">
+            <div class="form-group row mb-3">
+                <label class="col-sm-2 col-form-label text-right" asp-for="PublisherCreate.PublisherID">Publisher ID<span>*</span></label>
+                <div class="col-sm-10">
+                    <input asp-for="PublisherCreate.PublisherID" class="form-control" />
+                    <span asp-validation-for="PublisherCreate.PublisherID" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row mb-3">
+                <label class="col-sm-2 col-form-label text-right" asp-for="PublisherCreate.Name">Name<span>*</span></label>
+                <div class="col-sm-10">
+                    <input asp-for="PublisherCreate.Name" class="form-control" />
+                    <span asp-validation-for="PublisherCreate.Name" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row mb-3">
+                <label class="col-sm-2 col-form-label text-right" asp-for="PublisherCreate.Email">Email<span>*</span></label>
+                <div class="col-sm-10">
+                    <input asp-for="PublisherCreate.Email" class="form-control" />
+                    <span asp-validation-for="PublisherCreate.Email" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row mb-3">
+                <label class="col-sm-2 col-form-label text-right" asp-for="PublisherCreate.Phone">Phone<span>*</span></label>
+                <div class="col-sm-10">
+                    <input asp-for="PublisherCreate.Phone" class="form-control" />
+                    <span asp-validation-for="PublisherCreate.Phone" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row mb-3">
+                <label class="col-sm-2 col-form-label text-right" asp-for="PublisherCreate.Address">Address<span>*</span></label>
+                <div class="col-sm-10">
+                    <input asp-for="PublisherCreate.Address" class="form-control" />
+                    <span asp-validation-for="PublisherCreate.Address" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row mt-4">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-10">
+                    <button type="submit" class="btn btn-primary">Add</button>
+                    <span class="mx-2"></span> <!-- Adding space between buttons -->
+                    <a asp-page="./Publisher" class="btn btn-secondary">Cancel</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,85 @@
+@page
+@model Bookshop.Pages.Stationery.CreateModel
+@{
+    ViewData["Title"] = "Create";
+}
+
+<style>
+    .add-stationery{
+        color:blue;
+    }
+</style>
+
+<div class="container mt-5">
+    <div class="card p-4">
+        <h2 class="text-center add-stationery">Add New Stationery</h2>
+
+        @if (!string.IsNullOrEmpty(Model.Message))
+        {
+            <div class="alert alert-success" role="alert">
+                @Model.Message
+            </div>
+        }
+
+        <form method="post">
+            <div class="form-group row mb-3">
+                <label class="col-sm-2 col-form-label text-right" asp-for="StationeryCreate.StationeryID">Stationery ID<span>*</span></label>
+                <div class="col-sm-10">
+                    <input asp-for="StationeryCreate.StationeryID" class="form-control" />
+                    <span asp-validation-for="StationeryCreate.StationeryID" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row mb-3">
+                <label class="col-sm-2 col-form-label text-right" asp-for="StationeryCreate.Name">Name<span>*</span></label>
+                <div class="col-sm-10">
+                    <input asp-for="StationeryCreate.Name" class="form-control" />
+                    <span asp-validation-for="StationeryCreate.Name" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row mb-3">
+                <label  class="col-sm-2 col-form-label text-right" asp-for="StationeryCreate.Description">Description<span>*</span></label>
+                <div class="col-sm-10">
+                    <input asp-for="StationeryCreate.Description" class="form-control" />
+                    <span asp-validation-for="StationeryCreate.Description" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row mb-3">
+                <label class="col-sm-2 col-form-label text-right" asp-for="StationeryCreate.Type">Type<span>*</span></label>
+                <div class="col-sm-10">
+                    <input asp-for="StationeryCreate.Type" class="form-control" />
+                    <span asp-validation-for="StationeryCreate.Type" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row mb-3">
+                <label class="col-sm-2 col-form-label text-right" asp-for="StationeryCreate.Price">Price<span>*</span></label>
+                <div class="col-sm-10">
+                    <input asp-for="StationeryCreate.Price" class="form-control" />
+                    <span asp-validation-for="StationeryCreate.Price" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row mb-3">
+                <label class="col-sm-2 col-form-label text-right" asp-for="StationeryCreate.StockQuantity">Stock Quantity<span>*</span></label>
+                <div class="col-sm-10">
+                    <input asp-for="StationeryCreate.StockQuantity" class="form-control" />
+                    <span asp-validation-for="StationeryCreate.StockQuantity" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row mb-3">
+                <label class="col-sm-2 col-form-label text-right" asp-for="StationeryCreate.SupplierID">Supplier ID<span>*</span></label>
+                <div class="col-sm-10">
+                    <input asp-for="StationeryCreate.SupplierID" class="form-control" />
+                    <span asp-validation-for="StationeryCreate.SupplierID" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row mt-4">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-10">
+                    <button type="submit" class="btn btn-primary">Add</button>
+                    <span class="mx-2"></span> <!-- Adding space between buttons -->
+                    <a asp-page="./Stationery" class="btn btn-secondary">Cancel</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+

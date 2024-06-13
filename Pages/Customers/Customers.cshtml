@@ -1,0 +1,58 @@
+@page
+@model Bookshop.Pages.Customers.CustomersModel
+@{
+    ViewData["Title"] = "Customers";
+}
+
+<style>
+    .customer-card {
+        background-color: #f8f9fa;
+        border-radius: 10px;
+        padding: 15px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .customer-name {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #007bff; /* Blue color for customer name */
+    }
+
+    .customer-info {
+        margin-top: 10px;
+    }
+
+    .customer-info p {
+        margin-bottom: 5px;
+        color: #666; /* Slightly darker color for customer info */
+    }
+
+    .customers-heading {
+        background-color: #007bff; /* Blue background color for "Customers" heading */
+        color: #fff; /* White text color for "Customers" heading */
+        padding: 20px 20px; /* Adjust padding values as needed */
+        border-radius: 5px;
+    }
+</style>
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4 customers-heading">Customers</h1>
+    <div class="row">
+        @foreach (var customer in Model.Customers)
+        {
+            <div class="col-md-4">
+                <div class="customer-card">
+                    <div class="card-body">
+                        <h5 class="customer-name">@customer.Name</h5>
+                        <div class="customer-info">
+                            <p><strong>Email:</strong> @customer.Email</p>
+                            <p><strong>Phone:</strong> @customer.Phone</p>
+                            <p><strong>Address:</strong> @customer.Address</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

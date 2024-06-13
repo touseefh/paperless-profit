@@ -1,0 +1,39 @@
+@page
+@model Bookshop.Pages.Publisher.Publisher
+@{
+    ViewData["Title"] = "Publisher";
+}
+
+
+<h2 class="text-center mb-3">List Of Customer</h2>
+<a class="btn btn-primary mb-3" href="/Publisher/Create">New Publisher</a>
+<a class="btn btn-primary mb-3" href="/Publisher/Search">Search Publisher</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Publisher ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Address</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var publisher in Model.PublisherList)
+        {
+            <tr>
+                <td>@publisher.PublisherID</td>
+                <td>@publisher.Name</td>
+                <td>@publisher.Email</td>
+                <td>@publisher.Phone</td>
+                <td>@publisher.Address</td>
+                <td style="white-space:nowrap;">
+                    <a class="btn btn-primary btn-sm" href="/Publisher/Edit?PublisherID=@publisher.PublisherID">Edit</a>
+                    <a class="btn btn-danger btn-sm" href="/Publisher/Delete?PublisherID=@publisher.PublisherID">Delete</a>
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
