@@ -10,7 +10,7 @@ namespace Bookshop.Pages.Books
     public class CreateModel : PageModel
     {
         private readonly ILogger<CreateModel> _logger;
-        private readonly string _connectionString = "Server=DESKTOP-S9EO4OF\\SQLEXPRESS;Database=Touseef;Trusted_Connection=True;TrustServerCertificate=True";
+        private readonly string _connectionString = "";
 
         public CreateModel(ILogger<CreateModel> logger)
         {
