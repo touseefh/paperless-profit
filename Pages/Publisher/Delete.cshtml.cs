@@ -8,7 +8,7 @@ namespace Bookshop.Pages.Publisher
 {
     public class Delete : PageModel
     {
-        private readonly string _connectionString = "Server=DESKTOP-S9EO4OF\\SQLEXPRESS;Database=Touseef;Trusted_Connection=True;TrustServerCertificate=True";
+        private readonly string _connectionString = "";
 
         [BindProperty(SupportsGet = true)]
         public int PublisherID { get; set; }
