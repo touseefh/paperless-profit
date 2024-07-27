@@ -26,7 +26,7 @@ namespace Bookshop.Pages.Books
             {
                 try
                 {
-                    string connectionString = "Server=DESKTOP-S9EO4OF\\SQLEXPRESS;Database=Touseef;Trusted_Connection=True;TrustServerCertificate=True";
+                    string connectionString = "";
                     using (SqlConnection connection = new SqlConnection(connectionString))
                     {
                         connection.Open();
@@ -72,7 +72,7 @@ namespace Bookshop.Pages.Books
 
             try
             {
-                string connectionString = "Server=DESKTOP-S9EO4OF\\SQLEXPRESS;Database=Touseef;Trusted_Connection=True;TrustServerCertificate=True";
+                string connectionString = "";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
