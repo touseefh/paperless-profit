@@ -10,7 +10,7 @@ namespace Bookshop.Pages.Stationery
     public class EditModel : PageModel
     {
         private readonly ILogger<EditModel> _logger;
-        private readonly string _connectionString = "Server=DESKTOP-S9EO4OF\\SQLEXPRESS;Database=Touseef;Trusted_Connection=True;TrustServerCertificate=True";
+        private readonly string _connectionString = "";
 
         public EditModel(ILogger<EditModel> logger)
         {
