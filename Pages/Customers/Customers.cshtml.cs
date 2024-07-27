@@ -9,7 +9,7 @@ namespace Bookshop.Pages.Customers
 {
     public class CustomersModel : PageModel
     {
-        private readonly string _connectionString = "Server=DESKTOP-S9EO4OF\\SQLEXPRESS;Database=Touseef;Trusted_Connection=True;TrustServerCertificate=True";
+        private readonly string _connectionString = "";
 
         public List<Customer> Customers { get; set; } = new List<Customer>();
 
