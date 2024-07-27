@@ -9,7 +9,7 @@ namespace Bookshop.Pages.Transactions
 {
     public class TransactionsModel : PageModel
     {
-        private readonly string _connectionString = "Server=DESKTOP-S9EO4OF\\SQLEXPRESS;Database=Touseef;Trusted_Connection=True;TrustServerCertificate=True";
+        private readonly string _connectionString = "";
 
         public List<TransactionViewModel> Transactions { get; set; } = new List<TransactionViewModel>();
         public int TotalOrders { get; set; }
