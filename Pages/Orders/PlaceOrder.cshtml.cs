@@ -11,7 +11,7 @@ namespace Bookshop.Pages.Orders
 {
     public class PlaceOrderModel : PageModel
     {
-        private readonly string _connectionString = "Server=DESKTOP-S9EO4OF\\SQLEXPRESS;Database=Touseef;Trusted_Connection=True;TrustServerCertificate=True;Connection Timeout=30;"; // Increased timeout
+        private readonly string _connectionString = ""; // Increased timeout
 
         [BindProperty]
         public OrderInputModel OrderInput { get; set; } = new OrderInputModel();
