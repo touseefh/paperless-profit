@@ -36,8 +36,6 @@ We welcome contributions to enhance the application. To contribute, please follo
 3. Commit your changes and push to your fork.
 4. Open a pull request for review.
 
-## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 
