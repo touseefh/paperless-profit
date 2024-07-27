@@ -11,7 +11,7 @@ namespace Bookshop.Pages.Customers
 {
     public class CreateModel : PageModel
     {
-        private readonly string _connectionString = "Server=DESKTOP-S9EO4OF\\SQLEXPRESS;Database=Touseef;Trusted_Connection=True;TrustServerCertificate=True";
+        private readonly string _connectionString = "";
 
         [BindProperty]
         public CustomerInputModel Customer { get; set; } = new CustomerInputModel();
