@@ -12,7 +12,7 @@ namespace Bookshop.Pages.Orders
 {
     public class OrderHistoryModel : PageModel
     {
-        private readonly string _connectionString = "Server=DESKTOP-S9EO4OF\\SQLEXPRESS;Database=Touseef;Trusted_Connection=True;TrustServerCertificate=True";
+        private readonly string _connectionString = "";
         private readonly IWebHostEnvironment _webHostEnvironment;
 
         public OrderHistoryModel(IWebHostEnvironment webHostEnvironment)
