@@ -9,123 +9,125 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Bookshop
 build_property.RootNamespace = Bookshop
-build_property.ProjectDir = C:\Users\User\Desktop\Bookshop\
+build_property.ProjectDir = C:\Users\touse\Desktop\dotnet\paperless-profit\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\User\Desktop\Bookshop
+build_property.MSBuildProjectDirectory = C:\Users\touse\Desktop\dotnet\paperless-profit
 build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/User/Desktop/Bookshop/Pages/Books/Books.cshtml]
+[C:/Users/touse/Desktop/dotnet/paperless-profit/Pages/Books/Books.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va3NcQm9va3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Bookshop/Pages/Books/Create.cshtml]
+[C:/Users/touse/Desktop/dotnet/paperless-profit/Pages/Books/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va3NcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Bookshop/Pages/Books/Delete.cshtml]
+[C:/Users/touse/Desktop/dotnet/paperless-profit/Pages/Books/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va3NcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Bookshop/Pages/Books/Edit.cshtml]
+[C:/Users/touse/Desktop/dotnet/paperless-profit/Pages/Books/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va3NcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Bookshop/Pages/Books/Search.cshtml]
+[C:/Users/touse/Desktop/dotnet/paperless-profit/Pages/Books/Search.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQm9va3NcU2VhcmNoLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Bookshop/Pages/Customers/Create.cshtml]
+[C:/Users/touse/Desktop/dotnet/paperless-profit/Pages/Customers/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Bookshop/Pages/Customers/Customers.cshtml]
+[C:/Users/touse/Desktop/dotnet/paperless-profit/Pages/Customers/Customers.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3VzdG9tZXJzXEN1c3RvbWVycy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Bookshop/Pages/Error.cshtml]
+[C:/Users/touse/Desktop/dotnet/paperless-profit/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Bookshop/Pages/Index.cshtml]
+[C:/Users/touse/Desktop/dotnet/paperless-profit/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Bookshop/Pages/Inventry/Inventry.cshtml]
+[C:/Users/touse/Desktop/dotnet/paperless-profit/Pages/Inventry/Inventry.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW52ZW50cnlcSW52ZW50cnkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Bookshop/Pages/Orders/OrderHistory.cshtml]
+[C:/Users/touse/Desktop/dotnet/paperless-profit/Pages/Orders/OrderHistory.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3JkZXJzXE9yZGVySGlzdG9yeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Bookshop/Pages/Orders/PlaceOrder.cshtml]
+[C:/Users/touse/Desktop/dotnet/paperless-profit/Pages/Orders/PlaceOrder.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3JkZXJzXFBsYWNlT3JkZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Bookshop/Pages/Privacy.cshtml]
+[C:/Users/touse/Desktop/dotnet/paperless-profit/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Bookshop/Pages/Publisher/Create.cshtml]
+[C:/Users/touse/Desktop/dotnet/paperless-profit/Pages/Publisher/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHVibGlzaGVyXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Bookshop/Pages/Publisher/Delete.cshtml]
+[C:/Users/touse/Desktop/dotnet/paperless-profit/Pages/Publisher/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHVibGlzaGVyXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Bookshop/Pages/Publisher/Edit.cshtml]
+[C:/Users/touse/Desktop/dotnet/paperless-profit/Pages/Publisher/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHVibGlzaGVyXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Bookshop/Pages/Publisher/Publisher.cshtml]
+[C:/Users/touse/Desktop/dotnet/paperless-profit/Pages/Publisher/Publisher.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHVibGlzaGVyXFB1Ymxpc2hlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Bookshop/Pages/Publisher/Search.cshtml]
+[C:/Users/touse/Desktop/dotnet/paperless-profit/Pages/Publisher/Search.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHVibGlzaGVyXFNlYXJjaC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Bookshop/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/touse/Desktop/dotnet/paperless-profit/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Bookshop/Pages/Stationery/Create.cshtml]
+[C:/Users/touse/Desktop/dotnet/paperless-profit/Pages/Stationery/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RhdGlvbmVyeVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Bookshop/Pages/Stationery/Delete.cshtml]
+[C:/Users/touse/Desktop/dotnet/paperless-profit/Pages/Stationery/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RhdGlvbmVyeVxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Bookshop/Pages/Stationery/Edit.cshtml]
+[C:/Users/touse/Desktop/dotnet/paperless-profit/Pages/Stationery/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RhdGlvbmVyeVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Bookshop/Pages/Stationery/Search.cshtml]
+[C:/Users/touse/Desktop/dotnet/paperless-profit/Pages/Stationery/Search.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RhdGlvbmVyeVxTZWFyY2guY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Bookshop/Pages/Stationery/Stationery.cshtml]
+[C:/Users/touse/Desktop/dotnet/paperless-profit/Pages/Stationery/Stationery.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3RhdGlvbmVyeVxTdGF0aW9uZXJ5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Bookshop/Pages/Transactions/Transactions.cshtml]
+[C:/Users/touse/Desktop/dotnet/paperless-profit/Pages/Transactions/Transactions.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVHJhbnNhY3Rpb25zXFRyYW5zYWN0aW9ucy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Bookshop/Pages/_ViewImports.cshtml]
+[C:/Users/touse/Desktop/dotnet/paperless-profit/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Bookshop/Pages/_ViewStart.cshtml]
+[C:/Users/touse/Desktop/dotnet/paperless-profit/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/Desktop/Bookshop/Pages/Shared/_Layout.cshtml]
+[C:/Users/touse/Desktop/dotnet/paperless-profit/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-s5f64d5znk
